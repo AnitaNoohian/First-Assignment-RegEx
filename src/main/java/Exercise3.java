@@ -29,8 +29,17 @@ public class Exercise3 {
      */
 
     public static boolean validateEmail(String email) {
-        // TODO
-        return false;
+        String regex = ".+@.+\\..+";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(email);
+
+        if (matcher.find()){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /*
