@@ -11,7 +11,7 @@ public class Exercise3 {
     */
 
     public static String extractURL(String text) {
-        String regex = "write your regex pattern here!";  // TODO
+        String regex = "http.*://.+";  // TODO
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
