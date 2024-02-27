@@ -48,6 +48,16 @@ public class Exercise3 {
 
     public static List<String> findWordsWithRepeatLetters(String input) {
         List<String> wordsWithRepeatLetters = new ArrayList<>();
+
+        String regex = "(\\w*(\\w)\\w*)\\2\\w*";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(input);
+
+        while (matcher.find()){
+            wordsWithRepeatLetters.add(matcher.group());
+        }
+
         return wordsWithRepeatLetters;
         // TODO
     }
